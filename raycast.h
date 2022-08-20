@@ -6,7 +6,7 @@
 /*   By: mmardi <mmardi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:48:32 by mmardi            #+#    #+#             */
-/*   Updated: 2022/08/11 21:53:26 by mmardi           ###   ########.fr       */
+/*   Updated: 2022/08/15 16:21:40 by mmardi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # define PI 3.141592653589793
 # define FOV_ANGLE 60 * (PI / 180)
 # define NUM_RAYS 450
+# define TILE_SIZE 30
 
 # include "get_next_line.h"
 # include <stdio.h>
@@ -30,6 +31,15 @@
 typedef struct rays
 {
     float   rayangle;
+    int     wallhitx;
+    int     willhity;
+    int     columnid;
+    int     facingup;
+    int     facingdown;
+    int     facingright;
+    int     facingleft;
+    int     isHor;
+    int     isVer;
 }t_rays ;
 
 
